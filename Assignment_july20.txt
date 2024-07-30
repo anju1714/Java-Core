@@ -1,0 +1,42 @@
+// Parent class
+class Vehicle {
+    String brand;
+    String model;
+    int year;
+
+    public Vehicle(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    public void drive() {
+        System.out.println("The " + year + " " + brand + " " + model + " is driving.");
+    }
+}
+
+// Child class
+class Car extends Vehicle {
+    String color;
+
+    public Car(String brand, String model, int year, String color) {
+        super(brand, model, year);
+        this.color = color;
+    }
+
+    public void honk() {
+        System.out.println("The " + color + " " + brand + " " + model + " is honking.");
+    }
+}
+
+// Main class to test the functionality
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object of the Car class
+        Car myCar = new Car("Toyota", "Camry", 2020, "red");
+
+        // Calling the drive and honk methods
+        myCar.drive();
+        myCar.honk();
+    }
+}
