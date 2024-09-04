@@ -1,0 +1,170 @@
+package Library_Management_System;
+import java.util.Scanner;
+
+//Book class
+class Book {
+ private String title;
+ private String author;
+ private boolean isCheckedOut;
+ 
+ // Constructor
+ public Book(String title, String author) {
+     this.title = title;
+     this.author = author;
+     this.isCheckedOut = false; // Default is not checked out
+ }
+ 
+ // Getters and setters
+ public String getTitle() {
+     return title; // Returns the title of the book
+ }
+
+ public String getAuthor() {
+     return author; // Returns the author of the book
+ }
+
+ public boolean isCheckedOut() {
+     return isCheckedOut; // Returns whether the book is checked out
+ }
+
+ public void setCheckedOut(boolean checkedOut) {
+     isCheckedOut = checkedOut; // Sets the book's checked out status
+ }
+ 
+ // Display book information
+ public void displayInfo() {
+     System.out.println("Title: " + title + ", Author: " + author + ", Checked Out: " + isCheckedOut);
+ }
+}
+
+
+
+//Library class
+class Library {
+ private Book[] books;       // Array to hold books
+ private int bookCount;      // Number of books in the library
+
+ // Constructor to initialize the library with a capacity
+ public Library(int capacity) {
+     books = new Book[capacity]; // Initialize the array with a given capacity
+     bookCount = 0;              // Start with zero books
+ }
+
+ // Method to add a new book to the library
+ public void addBook(Book book) {
+     if (bookCount < books.length) {
+         books[bookCount] = book; // Add the book to the array
+         bookCount++;             // Increment the count of books
+         System.out.println("Book added successfully.");
+     } else {
+         System.out.println("Library is full, cannot add more books.");
+     }
+ }
+
+ // Method to view all available books
+ public void viewBooks() {
+     System.out.println("\nAvailable Books:");
+     for (int i = 0; i < bookCount; i++) {
+         books[i].displayInfo(); // Call displayInfo() for each book
+     }
+ }
+
+ // Method to check out a book by title
+ public void checkOutBook(String title) {
+     boolean found = false; // Flag to check if the book is found
+     for (int i = 0; i < bookCount; i++) {
+         if (books[i].getTitle().equalsIgnoreCase(title)) {
+             found = true; // Book found
+             if (!books[i].isCheckedOut()) {
+                 books[i].setCheckedOut(true); // Mark the book as checked out
+                 System.out.println("Book checked out successfully.");
+             } else {
+                 System.out.println("Book is already checked out.");
+             }
+             break; // Exit loop once the book is found
+         }
+     }
+     if (!found) {
+         System.out.println("Book not found.");
+     }
+ }
+
+ // Method to return a book by title
+ public void returnBook(String title) {
+     boolean found = false; // Flag to check if the book is found
+     for (int i = 0; i < bookCount; i++) {
+         if (books[i].getTitle().equalsIgnoreCase(title)) {
+             found = true; // Book found
+             if (books[i].isCheckedOut()) {
+                 books[i].setCheckedOut(false); // Mark the book as returned
+                 System.out.println("Book returned successfully.");
+             } else {
+                 System.out.println("Book was not checked out.");
+             }
+             break; // Exit loop once the book is found
+         }
+     }
+     if (!found) {
+         System.out.println("Book not found.");
+     }
+ }
+}
+
+
+public class LMS {
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner =  new Scanner(System.in);
+		 Library library = new Library(100);  // Create a library with capacity for 100 books
+
+	        while (true) { // Infinite loop to keep the menu running
+	            System.out.println("\nLibrary Management System");
+	            System.out.println("1. Add a Book");
+	            System.out.println("2. View All Books");
+	            System.out.println("3. Check Out a Book");
+	            System.out.println("4. Return a Book");
+	            System.out.println("5. Exit");
+	            System.out.print("Enter your choice: ");
+	            int choice = scanner.nextInt();    // Read the user's choice
+	            scanner.nextLine();               // Consume the newline character
+
+	            switch (choice) {                 // Handle the user's choice
+	                case 1:
+	                    System.out.print("Enter book title: ");
+	                    String title = scanner.nextLine();
+	                    System.out.print("Enter book author: ");
+	                    String author = scanner.nextLine();
+	                    library.addBook(new Book(title, author)); // Add a new book to the library
+	                    break;
+	                case 2:
+	                    library.viewBooks();      // View all books in the library
+	                    break;
+	                case 3:
+	                    System.out.print("Enter the title of the book to check out: ");
+	                    String checkOutTitle = scanner.nextLine();
+	                    library.checkOutBook(checkOutTitle); // Check out a book by title
+	                    break;
+	                case 4:
+	                    System.out.print("Enter the title of the book to return: ");
+	                    String returnTitle = scanner.nextLine();
+	                    library.returnBook(returnTitle); // Return a book by title
+	                    break;
+	                case 5:
+	                    System.out.println("Exiting the system. Goodbye!");
+	                    scanner.close();          // Close the scanner
+	                    System.exit(0);           // Exit the program
+	                    break;
+	                default:
+	                    System.out.println("Invalid choice, please try again."); // Handle invalid inputs
+	                    break;
+	            }
+	        }
+	    }
+		
+
+	}
+
+
