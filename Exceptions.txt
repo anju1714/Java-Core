@@ -1,0 +1,6 @@
+WHAT IS checked and unchecked exception ==> checkd exception are those axception those acured at compile time ist sub class of exception .and wr can handel it by try catch block
+Unchecked exception ==> are accuring suring runtime and not checkd by compiler it sub clas of Runtimr1exception.
+
+What is exception==>unwanted unexpexted event that accurd during program excecution and distub the normal flow of program
+
+Customized Exception =>
