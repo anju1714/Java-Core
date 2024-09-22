@@ -2,5 +2,8 @@ WHAT IS checked and unchecked exception ==> checkd exception are those axception
 Unchecked exception ==> are accuring suring runtime and not checkd by compiler it sub clas of Runtimr1exception.
 
 What is exception==>unwanted unexpexted event that accurd during program excecution and distub the normal flow of program
+what is error = > its a error ar accured some probem like memory out of bound abd many more whitch are not handle by programer is called error 
+
+what is exception handling => to stop abnormal program termination and to achive gracefull termination we can use exception handling 
 
 Customized Exception =>
