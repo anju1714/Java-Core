@@ -1,0 +1,33 @@
+git push
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git add .
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git commit -m 'did changes in case-list and task-list'
+[anjali 44bca64] did changes in case-list and task-list
+ Committer: Anjali Shikare <Anjali.Shikare@orbitindia.in>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 7 files changed, 846 insertions(+), 320 deletions(-)
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git pull origin main
+From https://github.com/megha083/csmapp
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git push
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 14.90 KiB | 847.00 KiB/s, done.
+Total 15 (delta 14), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (14/14), completed with 12 local objects.
+To https://github.com/megha083/csmapp.git
+   1531173..44bca64  anjali -> anjali
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> 
