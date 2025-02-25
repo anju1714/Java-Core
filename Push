@@ -31,3 +31,82 @@ remote: Resolving deltas: 100% (14/14), completed with 12 local objects.
 To https://github.com/megha083/csmapp.git
    1531173..44bca64  anjali -> anjali
 PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> 
+
+
+========== 2-25=2024
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config advice.addEmptyPathspec false"
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git add .
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git commit -m
+error: switch `m' requires a value
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git commit -m 'did changes in case-list and user'
+[anjali 9531af7] did changes in case-list and user
+ Committer: Anjali Shikare <Anjali.Shikare@orbitindia.in>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 6 files changed, 166 insertions(+), 40 deletions(-)
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git pull origin main
+From https://github.com/megha083/csmapp
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git push
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.81 KiB | 320.00 KiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To https://github.com/megha083/csmapp.git
+   44bca64..9531af7  anjali -> anjali
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git checkou main
+git: 'checkou' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git pull
+remote: Enumerating objects: 50, done.
+remote: Counting objects: 100% (50/50), done.
+remote: Compressing objects: 100% (26/26), done.
+remote: Total 50 (delta 30), reused 43 (delta 24), pack-reused 0 (from 0)
+Unpacking objects: 100% (50/50), 158.89 KiB | 270.00 KiB/s, done.
+From https://github.com/megha083/csmapp
+   1531173..0f05ba5  main       -> origin/main
+ * [new branch]      Anjali     -> origin/Anjali
+   260b017..e13dbaf  Pranav     -> origin/Pranav
+Updating 1531173..0f05ba5
+Fast-forward
+ src/app/_service/dashboard.service.ts              |   9 +-
+ src/app/_service/incident.service.ts               | 127 +++---
+ .../case-list/case-list.component.html             |  48 ++-
+ .../case-list/case-list.component.ts               | 451 +++++++++++++++------
+ .../task-list/task-list.component.css              |  37 ++
+ .../task-list/task-list.component.html             | 107 +++--
+ .../task-list/task-list.component.ts               | 393 ++++++++++++++----
+ .../user/user-creation/user-creation.component.css |   1 +
+ .../user-creation/user-creation.component.html     |  24 +-
+ .../user/user-creation/user-creation.component.ts  | 162 ++++++--
+ src/app/master/user/user.component.ts              |   3 +-
+ 11 files changed, 1007 insertions(+), 355 deletions(-)
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git checkout anjali
+Switched to branch 'anjali'
+Your branch is ahead of 'origin/anjali' by 5 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> git push         
+Everything up-to-date
+PS C:\Users\Anjali.Shikare\OneDrive - ORBIT TECHSOL (W) PRIVATE LIMITED\Desktop\CSMApp\csmapp> 
